@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 npm-debug.log*
@@ -91,3 +92,13 @@ jspm_packages/
 .Trashes
 ehthumbs.db
 Thumbs.db 
+=======
+# Ignore all node_modules folders recursively
+**/node_modules/
+.env
+dist/
+build/
+.next/
+*.log
+.DS_Store
+>>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)

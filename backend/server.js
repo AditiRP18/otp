@@ -1,5 +1,8 @@
 require('dotenv').config();
+<<<<<<< HEAD
 console.log('MONGODB_URI:', process.env.MONGODB_URI);
+=======
+>>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

@@ -21,4 +21,7 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('User', userSchema);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)
