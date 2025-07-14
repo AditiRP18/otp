@@ -11,12 +11,11 @@ console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'set' : 'not set');
 // Email transporter setup for Mailtrap
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
-<<<<<<< HEAD
   port: Number(process.env.EMAIL_PORT),
   secure: false, // Ensure port is a number
-=======
+
   port: Number(process.env.EMAIL_PORT), // Ensure port is a number
->>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)
+
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -49,11 +48,11 @@ router.post('/request-otp', async (req, res) => {
 
     // Send OTP email (simple text for now)
     await transporter.sendMail({
-<<<<<<< HEAD
+
       from: process.env.EMAIL_USER,
-=======
+
       from: "noreply@example.com",
->>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)
+
       to: email,
       subject: 'Your OTP Code',
       text: `Your OTP code is: ${otp}`,
@@ -85,11 +84,11 @@ router.post('/verify-otp', async (req, res) => {
 
     // Send confirmation email (simple text for now)
     await transporter.sendMail({
-<<<<<<< HEAD
+
       from: process.env.EMAIL_USER,
-=======
+
       from: "noreply@example.com",
->>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)
+
       to: email,
       subject: 'Email Verified',
       text: 'Your email has been successfully verified!'
@@ -119,11 +118,11 @@ router.post('/resend-otp', async (req, res) => {
     await user.save();
 
     await transporter.sendMail({
-<<<<<<< HEAD
+
       from: process.env.EMAIL_USER,
-=======
+
       from: "noreply@example.com",
->>>>>>> 67d1f37 (Fix: Remove embedded repo and add frontend properly)
+
       to: email,
       subject: 'Your OTP Code (Resent)',
       text: `Your new OTP code is: ${otp}`,
